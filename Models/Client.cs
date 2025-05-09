@@ -1,8 +1,10 @@
-﻿namespace webAPI.Models;
+﻿using System;
 
-public class Trip
+namespace webAPI.Models;
+
+public class Client
 {
-    public int id_trip { get; set; }
+    public int id_c { get; set; }
     public String first_name { get; set; }
     public String last_name { get; set; }
     public String email { get; set; }

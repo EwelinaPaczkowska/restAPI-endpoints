@@ -1,9 +1,12 @@
-﻿namespace webAPI.Services;
+﻿using System.Collections.Generic;
+using System.Threading;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+using webAPI.DTOs;
 
-public class ITripService
+namespace webAPI.Services;
+
+public interface ITripService
 {
-    public async Task<object?> GetTripsAsync(CancellationToken cancellationToken)
-    {
-        throw new NotImplementedException();
-    }
+    Task<IEnumerable<TripDTO>> GetTripsAsync(CancellationToken cancellationToken);
 }
